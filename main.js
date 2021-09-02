@@ -13,7 +13,7 @@ const searchBook = () => {
             "<p class='text-center text-white mx-auto w-50 p-3 bg-secondary'><b>Please enter a book name</b></p>";
     }
 
-    const url = ` http://openlibrary.org/search.json?q=${searchText}`
+    const url = ` https://openlibrary.org/search.json?q=${searchText}`
     fetch(url)
         .then(res => res.json())
         .then(data => bookDisply(data.docs))
